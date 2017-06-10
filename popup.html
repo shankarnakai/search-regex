@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Search Regex</title>
+    <style>
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 100%;
+        }
+        
+        #content {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 500px;
+        }
+        
+        #search,
+        .action {
+            float: left;
+        }
+        
+        #wrappper_search {
+            width: 300px;
+        }
+        
+        #wrappper_search:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+
+    <script src="search.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="wrappper_search">
+            <input id="search" placeholder="What you want find?" /> 
+            <button id="next" class="action">Next</button>
+            <button id="prev" class="action">Previous</button>
+        </div>
+    </div>
+</body>
+
+</html>

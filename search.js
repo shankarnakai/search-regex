@@ -1,16 +1,18 @@
-;(function(doc) {
-    'use strict';
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Search is ON");
 
-    console.log("Search in ON");
-    var markInstance = new Mark(document);
-    markInstance.markRegExp(/Lor.*/gmi, {
-        "noMatch": function(term) {
-	    console.log("No matched  "+ term); 
-        },
-        "done": function(counter) {
-	    console.log("Found "+ counter + " results");
-        },
+    var search = document.getElementById("search");
+
+    search.addEventListener("keypress", function() {
+        console.log(this.value);
+        var markInstance = new Mark(doc);
+        markInstance.markRegExp(/this.value/gm, {
+            "noMatch": function(term) {
+                console.log("No matched  " + term);
+            },
+            "done": function(counter) {
+                console.log("Found " + counter + " results");
+            },
+        });
     });
-    console.log("Marquei ");
-})(document);
-
+});
