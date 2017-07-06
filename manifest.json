@@ -13,6 +13,10 @@
     "background": {
         "scripts": ["background.js"]
     },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["context.js"]
+    }],
     "commands": {
         "toggle-feature": {
             "suggested_key": {
